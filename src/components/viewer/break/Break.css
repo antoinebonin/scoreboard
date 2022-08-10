@@ -1,0 +1,39 @@
+.Break-time {
+    color: white;
+    font-weight: 900;
+    font-size: 125px;
+    width: 100%;
+    text-align: center;
+    padding-top: 15%;
+}
+
+.Break-container {
+    width: 100%;
+    height: 50px;
+    margin-top: 15%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.Break-team-container {
+    width: 25%;
+    padding: 0 15px;
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+}
+
+.Break-team-container img {
+    height: 40px;
+    width: auto;
+    margin: 5px, auto;
+}
+
+.Break-team-container p {
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: larger;
+    line-height: 50px;
+    margin: 0;
+    color: white;
+}

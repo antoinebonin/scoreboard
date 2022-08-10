@@ -1,0 +1,23 @@
+.Score-container {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    display: flex;
+    font-weight: 900;
+}
+
+.Score-timer-container {
+    width: 100px;
+    line-height: 50px;
+    text-align: center;
+    color: white;
+    margin-right: 10px;
+}
+
+.Score-quarter {
+    background-color: #fdb417;
+}
+
+.Score-timer {
+    background-color: black;
+}

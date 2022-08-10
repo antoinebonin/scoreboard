@@ -1,0 +1,21 @@
+.Prog-container {
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    width: 500px;
+    background-color: black;
+    color: white;
+    font-weight: 800;
+}
+
+.Prog-header {
+    margin: 0;
+    border: 0;
+    border-bottom: 5px;
+    border-color: #fdb417;
+    border-style: solid;
+    text-align: center;
+    padding: 15px 0;
+    text-transform: uppercase;
+    font-weight: 900;
+}
