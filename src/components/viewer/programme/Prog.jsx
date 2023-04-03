@@ -17,7 +17,7 @@ export default function Prog () {
 
     return (
         <div className='Prog-container'>
-            <p className='Prog-header'>Programme du jour</p>
+            <p className='Prog-header'>Programme du jour en stream</p>
             {programme[getDayFromIndex(getDay(current.day))].map((el, index) => {
                 return <Match match={el} key={index}/>
             })}

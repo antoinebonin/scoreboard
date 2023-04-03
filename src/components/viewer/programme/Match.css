@@ -1,4 +1,5 @@
 .Match-container {
+    height: 40px;
     display: flex;
     padding: 0;
     border: 0;
@@ -21,6 +22,7 @@
 
 .Match-text-container p {
     text-transform: uppercase;
+    font-size: smaller;
 }
 
 .Match-img-container {
@@ -31,7 +33,7 @@
 }
 
 .Match-img-container img {
-    height: 30px;
+    height: 20px;
     width: auto;
     margin: 10px auto;
 }

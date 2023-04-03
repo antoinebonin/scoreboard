@@ -35,9 +35,12 @@ export const timeSlice = createSlice({
       setQuarter: (state, action) => {
         state.timers[action.payload.timer].quarter = action.payload.time
       },
+      setTimers: (state, action) => {
+        state.timers = action.payload.timers;
+      }
     },
   })
   
-  export const { addTime, subTime, setTime, addQuarter, subQuarter, setQuarter } = timeSlice.actions
+  export const { addTime, subTime, setTime, addQuarter, subQuarter, setQuarter, setTimers } = timeSlice.actions
   
   export default timeSlice.reducer

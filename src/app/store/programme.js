@@ -13,79 +13,100 @@ function retrieveState() {
 const initialState = {
   vendredi: [
       {
-          teamId: [4, 3],
+          teamId: [1, 6],
           timeStart: "18:00",
           score: null
       },
       {
-          teamId: [6, 0],
-          timeStart: "19:30",
+          teamId: [0, 7],
+          timeStart: "20:00",
           score: null
       },
   ],
   samedi: [
     {
+        teamId: [3, 8],
+        timeStart: "08:30",
+        score: null
+    },
+    {
+        teamId: [2, 11],
+        timeStart: "10:00",
+        score: null
+    },
+    {
+        teamId: [5, 4],
+        timeStart: "11:30",
+        score: null
+    },
+    {
+        teamId: [7, 11],
+        timeStart: "13:00",
+        score: null
+    },
+    {
+        teamId: [3, 4],
+        timeStart: "14:30",
+        score: null
+    },
+    {
         teamId: [0, 2],
-        timeStart: "09:00",
+        timeStart: "16:00",
         score: null
     },
     {
-        teamId: [4, 1],
-        timeStart: "10:30",
+        teamId: [8, 4],
+        timeStart: "17:30",
         score: null
     },
     {
-        teamId: [3, 7],
-        timeStart: "12:00",
+        teamId: [2, 7],
+        timeStart: "19:00",
         score: null
     },
     {
-        teamId: [5, 2],
-        timeStart: "14:00",
-        score: null
-    },
-    {
-        teamId: [3, 1],
-        timeStart: "15:30",
-        score: null
-    },
-    {
-        teamId: [2, 6],
-        timeStart: "17:00",
+        teamId: [3, 5],
+        timeStart: "20:30",
         score: null
     }
   ],
   dimanche: [
     {
-      teamId: [6, 1],
-      timeStart: "09:00",
+      teamId: [13, 13],
+      timeStart: "08:30",
       score: null
     },
     {
-      teamId: [5, 3],
-      timeStart: "10:30",
+      teamId: [13, 13],
+      timeStart: "10:00",
       score: null
     },
     {
-      teamId: [2, 4],
-      timeStart: "12:00",
+      teamId: [13, 13],
+      timeStart: "11:30",
       score: null
     },
     {
-      teamId: [7, 0],
-      timeStart: "13:30",
-      score: null
-    },
-    {
-      // Inconnu 
-      teamId: [5, 6],
-      timeStart: "15:30",
+      teamId: [13, 13],
+      timeStart: "13:00",
       score: null
     },
     {
       // Inconnu 
-      teamId: [3, 1],
-      timeStart: "17:30",
+      teamId: [13, 13],
+      timeStart: "14:30",
+      score: null
+    },
+    {
+      // Inconnu 
+      teamId: [13, 13],
+      timeStart: "16:00",
+      score: null
+    },
+    {
+      // Inconnu 
+      teamId: [13, 13],
+      timeStart: "18:00",
       score: null
     },
   ]
@@ -98,10 +119,15 @@ export const programmeSlice = createSlice({
       addScore: (state, action) => {
         state[action.payload.day][action.payload.index].score = action.payload.score;
         saveState(state);
-      }
+      },
+      setProg: (state, action) => {
+        state.vendredi = action.payload.vendredi;
+        state.samedi = action.payload.samedi;
+        state.dimanche = action.payload.dimanche;
+      },
     },
   })
   
-  export const { addScore } = programmeSlice.actions
+  export const { addScore, setProg } = programmeSlice.actions
   
   export default programmeSlice.reducer

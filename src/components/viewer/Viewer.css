@@ -1,7 +1,6 @@
 .Viewer-container {
-    width: 1280px;
-    height: 720px;
-    background-color: #00ff00;
+    width: 100vw;
+    height: 100vh;
     margin: auto;
     position: relative;
 }

@@ -4,9 +4,52 @@ import './Viewer.css'
 import { useState, useEffect } from 'react'
 import End from './end/End'
 import Break from './break/Break'
+import store from '../../app/store'
+import useWebSocket, {ReadyState} from 'react-use-websocket';
+import { useDispatch } from 'react-redux'
+import { setTimers } from '../../app/store/time'
+import { setProg } from '../../app/store/programme'
+import { setTeams } from '../../app/store/teams'
+import { setCurrent } from '../../app/store/current'
 
-export default function Viewer () {
-    const [currentView, setCurrentView] = useState("score");
+export default function Viewer ({currentView}) {
+  const [isHost, setIsHost] = useState(false);
+  const dispatch = useDispatch();
+
+  const { sendJsonMessage } = useWebSocket('ws://localhost:8080', {
+    onOpen: () => {
+      if (!isHost) {
+        sendJsonMessage("please");
+      }
+    },
+    onMessage: (event) => {
+      const json = JSON.parse(event.data);
+      if (
+        json === 'please' && 
+        isHost
+        ) {
+        console.log("Please receive");
+        sendJsonMessage(store.getState());
+      }
+      if (
+        !isHost &&
+        json != "please" &&
+        json != {} &&
+        json != null
+        ) {
+          setStore(json);
+      }
+    },
+    shouldReconnect: (closeEvent) => true,
+  })
+
+  const setStore = (json) => {
+    const {current, prog, teams, time} = json;
+    dispatch(setTimers(time));
+    //dispatch(setTeams(teams));
+    dispatch(setProg(prog));
+    dispatch(setCurrent(current));
+  }
 
     function selector() {
         switch(currentView) {
@@ -23,50 +66,11 @@ export default function Viewer () {
         }
     }
 
-    function handleChange(event) {
-        setCurrentView(event.target.value)
-    }
-
-    function selectView(event) {
-        if (event.altKey === true && event.keyCode === 77) {
-            setCurrentView("score")
-        }
-        if (event.altKey === true && event.keyCode === 66) {
-            setCurrentView("temps-morts")
-        }
-        if (event.altKey === true && event.keyCode === 72) {
-            setCurrentView("mi-temps")
-        }
-        if (event.altKey === true && (event.keyCode === 69 || event.keyCode === 83 || event.keyCode === 73)) {
-            setCurrentView("fin-du-match")
-        }
-    }
-    
-
-    useEffect(() => {
-        function handleKeyPress(e) {
-            selectView(e)
-        }
-
-        document.addEventListener('keydown', handleKeyPress);
-    
-        // Don't forget to clean up
-        return function cleanup() {
-          document.removeEventListener('keydown', handleKeyPress);
-        }
-      }, [currentView]);
-
     return (
         <div>
             <div className='Viewer-container'>
                 {selector()}
             </div>
-            <select value={currentView} onChange={(e) => handleChange(e)}>
-                <option value="score">Match</option>
-                <option value="temps-morts">Temps morts</option>
-                <option value="mi-temps">Mi temps</option>
-                <option value="fin-du-match">Fin du match</option>
-            </select>
         </div>
         
     )

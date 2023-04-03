@@ -61,7 +61,7 @@ export default function Match () {
             </select> <br />
             Match : <br />
             <select onChange={(e) => handleChange(e)}>
-                {programme[getDayFromIndex(currentDay)].map((el, index) => {
+                {programme[getDayFromIndex(current.day)].map((el, index) => {
                     return <option key={index} value={index}> {teams[el.teamId[0]].name} - {teams[el.teamId[1]].name}</option>
                 })}
             </select>

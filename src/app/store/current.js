@@ -50,10 +50,14 @@ export const currentSlice = createSlice({
       },
       selectDay: (state, action) => {
         state.day = action.payload.day
+      },
+      setCurrent: (state, action) => {
+        state.day = action.payload.day
+        state.teams = action.payload.teams
       }
     },
   })
   
-  export const { addScore, subScore, addFools, subFools, selectTeamFn, selectColor, selectDay } = currentSlice.actions
+  export const { addScore, subScore, addFools, subFools, selectTeamFn, selectColor, selectDay, setCurrent } = currentSlice.actions
   
   export default currentSlice.reducer
