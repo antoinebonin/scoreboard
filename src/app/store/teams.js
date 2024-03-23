@@ -8,6 +8,7 @@ import barceloneLogo from '../../images/BARCA.png'
 import hennuyersLogo from '../../images/Hennuyers.png'
 import udineLogo from '../../images/UDINE.png'
 import svbdLogo from '../../images/SVBD.png'
+import sgoffLogo from '../../images/SGOSFF.jpeg'
 import LokomotiefLogo from '../../images/Lokomotief.png'
 import LeganesLogo from '../../images/LEGANES.png'
 import undifinedLogo from '../../images/UNDIFINED.png'
@@ -20,7 +21,7 @@ export const teamsSlice = createSlice({
             // 0
             name: "Avsr H",
             colors: [
-                "#262626",
+                "#1a1919",
                 "#32a852"
             ],
             logo: avsrLogo
@@ -29,7 +30,7 @@ export const teamsSlice = createSlice({
             // 1
             name: "Avsr F",
             colors: [
-                "#262626",
+                "#4287f5",
                 "#32a852"
             ],
             logo: avsrLogo
@@ -38,7 +39,7 @@ export const teamsSlice = createSlice({
             // 2
             name: "Svbd",
             colors: [
-                "#262626",
+                "#eb130c",
                 "#32a852"
             ],
             logo: svbdLogo
@@ -47,16 +48,16 @@ export const teamsSlice = createSlice({
             // 3
             name: "Lokomotief",
             colors: [
-                "#262626",
-                "#32a852"
+                "#eb4034",
+                "#f0f0f2"
             ],
             logo: LokomotiefLogo
         },
         {
             // 4
-            name: "Leganes",
+            name: "Leganes H",
             colors: [
-                "#262626",
+                "#2a3970",
                 "#32a852"
             ],
             logo: LeganesLogo
@@ -65,8 +66,8 @@ export const teamsSlice = createSlice({
             // 5
             name: "AMSB",
             colors: [
-                "#a8323a",
-                "#e6e6e6"
+                "#f0f0f2",
+                "#eb4034"
             ],
             logo: asmbLogo
         },
@@ -74,7 +75,7 @@ export const teamsSlice = createSlice({
             // 6
             name: "Milan",
             colors: [
-                "#f0b40e",
+                "#fa0707",
                 "#a87532"
             ],
             logo: milanLogo
@@ -83,7 +84,7 @@ export const teamsSlice = createSlice({
             // 7
             name: "Barcelone",
             colors: [
-                "#2f302f",
+                "#e6e1e1",
                 "#dedede"
             ],
             logo: barceloneLogo
@@ -92,34 +93,34 @@ export const teamsSlice = createSlice({
             // 8
             name: "Hennuyers",
             colors: [
-                "#fcfffd",
+                "#e8e8e8",
                 "#960b1d"
             ],
             logo: hennuyersLogo
         },
         {
             // 9
-            name: "Dijon",
+            name: "Leganes F",
             colors: [
-                "#333333",
-                "#dedede"
+                "#2a3970",
+                "#e8e8e8"
             ],
-            logo: hennuyersLogo
+            logo: LeganesLogo
         },
         {
             // 10
-            name: "Prague",
+            name: "SGOFF",
             colors: [
                 "#f2f2f2",
                 "#002f9e"
             ],
-            logo: hennuyersLogo
+            logo: sgoffLogo
         },
         {
             // 11
             name: "Udine H",
             colors: [
-                "#242424",
+                "#2e2e2e",
                 "#a87532"
             ],
             logo: udineLogo

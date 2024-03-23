@@ -1,0 +1,19 @@
+p {
+    margin: 0;
+}
+
+.line {
+    display: flex;
+    margin-bottom: 5px;
+}
+
+.container-match {
+    display: flex;
+    gap: 20px;
+}
+
+.other {
+    display: flex;
+    flex-direction: column;
+    width: 75px;
+}

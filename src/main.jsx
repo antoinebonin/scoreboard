@@ -18,7 +18,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/match",
-    element: <Viewer currentView={"match"} />,
+    element: <Viewer currentView={"score"} />,
   },
   {
     path: "/break",
