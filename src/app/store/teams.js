@@ -13,6 +13,22 @@ import LokomotiefLogo from '../../images/Lokomotief.png'
 import LeganesLogo from '../../images/LEGANES.png'
 import undifinedLogo from '../../images/UNDIFINED.png'
 
+/**
+ * 0 AVSR H
+ * 1 AVSR F
+ * 2 CRO Lyon
+ * 3 JDA Dijon
+ * 4 Hennuyers
+ * 5 Rising stars Berne
+ * 6 Lokomotief H
+ * 7 Lokomotief F
+ * 8 ASD BASKET COSTA
+ * 9 SANGA BASKET MILAN
+ * 10 LEGANÈS
+ * 11 LAURENTY NEXT GEN ACADEMY
+ * 12 Undefined
+ */
+
 export const teamsSlice = createSlice({
     name: 'teams',
     initialState: {
@@ -37,105 +53,96 @@ export const teamsSlice = createSlice({
         },
         {
             // 2
-            name: "Svbd",
+            name: "CRO Lyon",
             colors: [
                 "#eb130c",
                 "#32a852"
             ],
-            logo: svbdLogo
+            logo: undifinedLogo
         },
         {
             // 3
-            name: "Lokomotief",
+            name: "JDA Dijon",
             colors: [
                 "#eb4034",
                 "#f0f0f2"
             ],
-            logo: LokomotiefLogo
+            logo: undifinedLogo
         },
         {
             // 4
-            name: "Leganes H",
+            name: "Hennuyers",
             colors: [
                 "#2a3970",
                 "#32a852"
             ],
-            logo: LeganesLogo
+            logo: hennuyersLogo
         },
         {
             // 5
-            name: "AMSB",
+            name: "Rising stars Berne",
             colors: [
                 "#f0f0f2",
                 "#eb4034"
             ],
-            logo: asmbLogo
+            logo: undifinedLogo
         },
         {
             // 6
-            name: "Milan",
+            name: "Lokomotief H",
             colors: [
                 "#fa0707",
                 "#a87532"
             ],
-            logo: milanLogo
+            logo: LokomotiefLogo
         },
         {
             // 7
-            name: "Barcelone",
+            name: "Lokomotief F",
             colors: [
                 "#e6e1e1",
                 "#dedede"
             ],
-            logo: barceloneLogo
+            logo: LokomotiefLogo
         },
         {
             // 8
-            name: "Hennuyers",
+            name: "ASD BASKET COSTA",
             colors: [
                 "#e8e8e8",
                 "#960b1d"
             ],
-            logo: hennuyersLogo
+            logo: undifinedLogo
         },
         {
             // 9
-            name: "Leganes F",
+            name: "SANGA BASKET MILAN",
             colors: [
                 "#2a3970",
                 "#e8e8e8"
             ],
-            logo: LeganesLogo
+            logo: undifinedLogo
         },
         {
             // 10
-            name: "SGOFF",
+            name: "LEGANÈS",
             colors: [
                 "#f2f2f2",
                 "#002f9e"
             ],
-            logo: sgoffLogo
+            logo: undifinedLogo
         },
         {
             // 11
-            name: "Udine H",
+            name: "LAURENTY NEXT GEN ACADEMY",
             colors: [
                 "#2e2e2e",
                 "#a87532"
             ],
-            logo: udineLogo
+            logo: undifinedLogo
         },
         {
             // 12
-            name: "Udine F",
-            colors: [
-                "#242424",
-                "#a87532"
-            ],
-            logo: udineLogo
-        },
-        {
-            // 13
             name: "Non défini",
             colors: [
                 "#a8323a",

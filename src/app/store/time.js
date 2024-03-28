@@ -5,7 +5,7 @@ export const timeSlice = createSlice({
     initialState: {
       timers : [
         {
-          count: 480,
+          count: 420,
           quarter: 1
         },
         {

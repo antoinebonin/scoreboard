@@ -27,16 +27,32 @@ function retrieveState() {
   return initialState;
 }
 
+/**
+ * 0 AVSR H
+ * 1 AVSR F
+ * 2 CRO Lyon
+ * 3 JDA Dijon
+ * 4 Hennuyers
+ * 5 Rising stars Berne
+ * 6 Lokomotief H
+ * 7 Lokomotief F
+ * 8 ASD BASKET COSTA
+ * 9 SANGA BASKET MILAN
+ * 10 LEGANÈS
+ * 11 LAURENTY NEXT GEN ACADEMY
+ * 12 Undefined
+ */
+
 const initialState = {
   vendredi: [
       {
-          teamId: [1, 6],
+          teamId: [8, 5],
           timeStart: "18:00",
           score: null,
           gymnase: 'st-rom'
       },
       {
-          teamId: [0, 7],
+          teamId: [1, 9],
           timeStart: "20:00",
           score: null,
           gymnase: 'st-rom'
@@ -44,103 +60,162 @@ const initialState = {
   ],
   samedi: [
     {
-        teamId: [3, 8],
+        teamId: [6, 0],
         timeStart: "08:30",
         score: null,
-        gymnase: 'revent'
+        gymnase: 'st-rom'
     },
     {
-        teamId: [2, 11],
+        teamId: [10, 11],
+        timeStart: "08:30",
+        score: null,
+        gymnase: 'ampuis'
+    },
+    {
+        teamId: [4, 2],
+        timeStart: "10:00",
+        score: null,
+        gymnase: 'st-rom'
+    },
+    {
+        teamId: [7, 9],
         timeStart: "10:00",
         score: null,
         gymnase: 'ampuis'
     },
     {
-        teamId: [5, 4],
+        teamId: [3, 5],
         timeStart: "11:30",
         score: null,
         gymnase: 'st-rom'
     },
     {
-        teamId: [7, 11],
+        teamId: [1, 10],
+        timeStart: "11:30",
+        score: null,
+        gymnase: 'ampuis'
+    },
+    {
+        teamId: [2, 8],
         timeStart: "13:00",
         score: null,
         gymnase: 'st-rom'
     },
     {
-        teamId: [3, 4],
+        teamId: [11, 7],
+        timeStart: "13:00",
+        score: null,
+        gymnase: 'ampuis'
+    },
+    {
+        teamId: [6, 3],
         timeStart: "14:30",
         score: null,
         gymnase: 'st-rom'
     },
     {
-        teamId: [0, 2],
+        teamId: [9, 10],
+        timeStart: "14:30",
+        score: null,
+        gymnase: 'ampuis'
+    },
+    {
+        teamId: [0, 4],
         timeStart: "16:00",
         score: null,
         gymnase: 'st-rom'
     },
     {
-        teamId: [8, 4],
+        teamId: [0, 6],
+        timeStart: "16:00",
+        score: null,
+        gymnase: 'ampuis'
+    },
+    {
+        teamId: [12, 12],
         timeStart: "17:30",
         score: null,
         gymnase: 'st-rom'
     },
     {
-        teamId: [2, 7],
+        teamId: [12, 12],
+        timeStart: "17:30",
+        score: null,
+        gymnase: 'ampuis'
+    },
+    {
+        teamId: [12, 12],
         timeStart: "19:00",
         score: null,
         gymnase: 'st-rom'
     },
     {
-        teamId: [3, 5],
-        timeStart: "20:30",
+        teamId: [1, 11],
+        timeStart: "19:00",
         score: null,
         gymnase: 'st-rom'
-    }
+    },
   ],
   dimanche: [
     {
-      teamId: [0, 3],
+      teamId: [12, 12],
+      timeStart: "08:30",
+      score: null,
+        gymnase: 'ampuis'
+    },
+    {
+      teamId: [10, 7],
+      timeStart: "10:00",
+      score: null,
+        gymnase: 'ampuis'
+    },
+    {
+      teamId: [12, 12],
+      timeStart: "11:30",
+      score: null,
+        gymnase: 'ampuis'
+    },
+    {
+      teamId: [12, 12],
       timeStart: "08:30",
       score: null,
         gymnase: 'st-rom'
     },
     {
-      teamId: [7, 5],
+      teamId: [12, 12],
       timeStart: "10:00",
       score: null,
         gymnase: 'st-rom'
     },
     {
-      teamId: [2, 8],
+      teamId: [11, 9],
       timeStart: "11:30",
       score: null,
         gymnase: 'st-rom'
     },
     {
-      teamId: [0, 7],
+      teamId: [12, 12],
       timeStart: "13:00",
       score: null,
         gymnase: 'st-rom'
     },
     {
-      // Inconnu 
-      teamId: [10, 12],
+      teamId: [12, 12],
       timeStart: "14:30",
       score: null,
         gymnase: 'st-rom'
     },
     {
       // Inconnu 
-      teamId: [1, 9],
+      teamId: [12, 12],
       timeStart: "16:00",
       score: null,
         gymnase: 'st-rom'
     },
     {
       // Inconnu 
-      teamId: [3, 5],
-      timeStart: "18:00",
+      teamId: [12, 12],
+      timeStart: "18:30",
       score: null,
         gymnase: 'st-rom'
     },

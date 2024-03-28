@@ -19,7 +19,6 @@ export default function Prog () {
     const gymnase = [
         {name: 'Saint Romain en Gal', code: 'st-rom'},
         {name: 'Ampuis', code: 'ampuis'},
-        {name: 'Reventin', code: 'revent'},
     ]
 
     const [currentGymnase, setCurrentGymnase] = useState(0)
