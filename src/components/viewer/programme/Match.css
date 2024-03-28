@@ -11,13 +11,13 @@
 .Match-text-container {
     display: flex;
     justify-content: space-between;
-    width: calc(100% - 200px);
-    margin: 0 25px;
+    align-items: center;
+    width: calc(100% - 100px);
+    margin: 0 5px;
 }
 
 .Match-text-container .Match-team-name {
-    width: 95px;
-    text-align: center;
+    width: 135px;
 }
 
 .Match-text-container p {

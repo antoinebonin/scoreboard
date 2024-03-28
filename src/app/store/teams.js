@@ -2,14 +2,14 @@ import { createSlice } from '@reduxjs/toolkit'
 
 // LOGO
 import avsrLogo from '../../images/AVSR.png'
-import asmbLogo from '../../images/AMSB.png'
-import milanLogo from '../../images/MILAN.png'
-import barceloneLogo from '../../images/BARCA.png'
 import hennuyersLogo from '../../images/Hennuyers.png'
-import udineLogo from '../../images/UDINE.png'
-import svbdLogo from '../../images/SVBD.png'
-import sgoffLogo from '../../images/SGOSFF.jpeg'
 import LokomotiefLogo from '../../images/Lokomotief.png'
+import CostaLogo from '../../images/costa.png'
+import CroLogo from '../../images/cro.png'
+import DijonLogo from '../../images/dijon.png'
+import RisingLogo from '../../images/rising-star.png'
+import MilanLogo from '../../images/milan.png'
+import AcademyLogo from '../../images/Next-gen-academy.png'
 import LeganesLogo from '../../images/LEGANES.png'
 import undifinedLogo from '../../images/UNDIFINED.png'
 
@@ -58,7 +58,7 @@ export const teamsSlice = createSlice({
                 "#eb130c",
                 "#32a852"
             ],
-            logo: undifinedLogo
+            logo: CroLogo
         },
         {
             // 3
@@ -67,7 +67,7 @@ export const teamsSlice = createSlice({
                 "#eb4034",
                 "#f0f0f2"
             ],
-            logo: undifinedLogo
+            logo: DijonLogo
         },
         {
             // 4
@@ -85,7 +85,7 @@ export const teamsSlice = createSlice({
                 "#f0f0f2",
                 "#eb4034"
             ],
-            logo: undifinedLogo
+            logo: RisingLogo
         },
         {
             // 6
@@ -112,7 +112,7 @@ export const teamsSlice = createSlice({
                 "#e8e8e8",
                 "#960b1d"
             ],
-            logo: undifinedLogo
+            logo: CostaLogo
         },
         {
             // 9
@@ -121,7 +121,7 @@ export const teamsSlice = createSlice({
                 "#2a3970",
                 "#e8e8e8"
             ],
-            logo: undifinedLogo
+            logo: MilanLogo
         },
         {
             // 10
@@ -130,7 +130,7 @@ export const teamsSlice = createSlice({
                 "#f2f2f2",
                 "#002f9e"
             ],
-            logo: undifinedLogo
+            logo: LeganesLogo
         },
         {
             // 11
@@ -139,7 +139,7 @@ export const teamsSlice = createSlice({
                 "#2e2e2e",
                 "#a87532"
             ],
-            logo: undifinedLogo
+            logo: AcademyLogo
         },
         {
             // 12

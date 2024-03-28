@@ -30,7 +30,7 @@ export default function Prog () {
             } else {
                 setCurrentGymnase((value) => value + 1)
             }
-        }, 3000);
+        }, 7500);
         return () => clearTimeout(interval);
     }, [currentGymnase]);
 
