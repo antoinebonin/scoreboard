@@ -1,4 +1,5 @@
 import { addTime, subTime, setTime, subQuarter, addQuarter } from '../../../app/store/time.js'
+import { resetFools } from '../../../app/store/current.js'
 import { useSelector, useDispatch } from 'react-redux'
 import { useState, useEffect } from 'react';
 import './Timer.css'
@@ -30,6 +31,11 @@ export default function Timer () {
         if (event.altKey === true && event.keyCode === 32) {
             setActive(!active);
         }
+    }
+
+    const handleChangeQuarter = () => {
+        dispatch(resetFools())
+        dispatch(addQuarter({timer: 0}))
     }
     
 
@@ -74,7 +80,7 @@ export default function Timer () {
                     -1
                 </button>
                 <button
-                onClick={() => dispatch(addQuarter({timer: 0}))}>
+                onClick={() => handleChangeQuarter()}>
                     +1
                 </button>
             </div>
